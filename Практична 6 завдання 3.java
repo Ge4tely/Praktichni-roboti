@@ -6,7 +6,7 @@ public class task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
-        System.out.print("Введіть кількість розмір масиву: ");
+        System.out.print("Введіть розмір масиву: ");
         int size = scanner.nextInt();
 
             int[] numbers = new int[size];
