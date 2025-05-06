@@ -53,9 +53,9 @@ public class Main {
                 s += "Символ останнього хода: 0\n";
             }
             if (tie) {
-                System.out.println("Гра закінчилась нічиєю");
+                s += "Гра закінчилась нічиєю";
             } else {
-                System.out.println("Гра закінчилась перемогою останнього зіграного символа");
+                s += "Гра закінчилась перемогою останнього зіграного символа";
             }
             writer.write(s);
         } catch (FileNotFoundException e) {
