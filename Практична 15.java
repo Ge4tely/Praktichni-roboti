@@ -1,6 +1,9 @@
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 import java.lang.Math;
 import java.io.*;
+import java.time.LocalDateTime;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
@@ -55,8 +58,11 @@ public class Main {
             if (tie) {
                 s += "Гра закінчилась нічиєю";
             } else {
-                s += "Гра закінчилась перемогою останнього зіграного символа";
+                s += "Гра закінчилась перемогою останнього зіграного символа\n";
             }
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm:ss");
+            s += "Дата та час гри: " + now.format(format);
             writer.write(s);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не знайдено!" + e.getMessage());
